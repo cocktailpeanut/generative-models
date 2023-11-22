@@ -136,12 +136,13 @@ if __name__ == "__main__":
 
         if mode == "img2vid":
             img = load_img_for_prediction(W, H)
-            cond_aug = st.number_input(
-                "Conditioning augmentation:", value=0.02, min_value=0.0
-            )
-            value_dict["cond_frames_without_noise"] = img
-            value_dict["cond_frames"] = img + cond_aug * torch.randn_like(img)
-            value_dict["cond_aug"] = cond_aug
+            if img != None:
+              cond_aug = st.number_input(
+                  "Conditioning augmentation:", value=0.02, min_value=0.0
+              )
+              value_dict["cond_frames_without_noise"] = img
+              value_dict["cond_frames"] = img + cond_aug * torch.randn_like(img)
+              value_dict["cond_aug"] = cond_aug
 
         seed = st.sidebar.number_input(
             "seed", value=23, min_value=0, max_value=int(1e9)
