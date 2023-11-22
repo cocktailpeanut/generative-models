@@ -900,7 +900,7 @@ def save_video_as_grid_and_mp4(
     for vid in video_batch:
         save_image(vid, fp=os.path.join(save_path, f"{base_count:06d}.png"), nrow=4)
 
-        video_path = (Path(save_path) / f"{base_count:06d}.mp4").resolve()
+        video_path = os.path.join(save_path, f"{base_count:06d}.mp4")
 
         writer = cv2.VideoWriter(
             video_path,

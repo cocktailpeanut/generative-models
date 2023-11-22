@@ -9,7 +9,7 @@ SAVE_PATH = "outputs/demo/vid/"
 
 VERSION2SPECS = {
     "svd": {
-        "T": 1,
+        "T": 14,
         "H": 576,
         "W": 1024,
         "C": 4,
@@ -28,7 +28,7 @@ VERSION2SPECS = {
         },
     },
     "svd_image_decoder": {
-        "T": 1,
+        "T": 14,
         "H": 576,
         "W": 1024,
         "C": 4,
@@ -47,7 +47,7 @@ VERSION2SPECS = {
         },
     },
     "svd_xt": {
-        "T": 1,
+        "T": 25,
         "H": 576,
         "W": 1024,
         "C": 4,
@@ -68,7 +68,7 @@ VERSION2SPECS = {
         },
     },
     "svd_xt_image_decoder": {
-        "T": 1,
+        "T": 25,
         "H": 576,
         "W": 1024,
         "C": 4,
