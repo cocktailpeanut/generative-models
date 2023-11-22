@@ -1,4 +1,5 @@
 import os
+from pathlib import Path
 
 from pytorch_lightning import seed_everything
 
@@ -8,7 +9,7 @@ SAVE_PATH = "outputs/demo/vid/"
 
 VERSION2SPECS = {
     "svd": {
-        "T": 14,
+        "T": 1,
         "H": 576,
         "W": 1024,
         "C": 4,
@@ -27,7 +28,7 @@ VERSION2SPECS = {
         },
     },
     "svd_image_decoder": {
-        "T": 14,
+        "T": 1,
         "H": 576,
         "W": 1024,
         "C": 4,
@@ -46,7 +47,7 @@ VERSION2SPECS = {
         },
     },
     "svd_xt": {
-        "T": 25,
+        "T": 1,
         "H": 576,
         "W": 1024,
         "C": 4,
@@ -67,7 +68,7 @@ VERSION2SPECS = {
         },
     },
     "svd_xt_image_decoder": {
-        "T": 25,
+        "T": 1,
         "H": 576,
         "W": 1024,
         "C": 4,
@@ -148,7 +149,7 @@ if __name__ == "__main__":
         seed_everything(seed)
 
         save_locally, save_path = init_save_locally(
-            os.path.join(SAVE_PATH, version), init_value=True
+            (Path(SAVE_PATH) / version).resolve(), init_value=True
         )
 
         options["num_frames"] = T
