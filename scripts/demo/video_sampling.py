@@ -64,7 +64,7 @@ VERSION2SPECS = {
             "guider": 2,
             "force_uc_zero_embeddings": ["cond_frames", "cond_frames_without_noise"],
             "num_steps": 30,
-            "decoding_t": 14,
+            "decoding_t": 1,
         },
     },
     "svd_xt_image_decoder": {
@@ -85,7 +85,7 @@ VERSION2SPECS = {
             "guider": 2,
             "force_uc_zero_embeddings": ["cond_frames", "cond_frames_without_noise"],
             "num_steps": 30,
-            "decoding_t": 14,
+            "decoding_t": 1,
         },
     },
 }
